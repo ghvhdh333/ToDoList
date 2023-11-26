@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.main_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-form input {
+    border: 0;
+    width: 250px;
+    font-size: 20px;
+    
+    border-radius: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#login-form button {
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #1d9dd9;
+    color: rgb(232, 232, 232);
+
+    border-radius: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#login-form button:hover {
+    background-color: #167cab;
+    cursor: pointer;
+    color: white;
+}
+
+#login-form button:active {
+    background-color: #1d9dd9;
+    color: white;
+}
+
+#clock {
+    font-size: 90px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+#date {
+    font-size: 20px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#greeting {
+    font-size: 40px;
+    color: white;
+}
+
+#todo-form input {
+    border: 0px;
+    width: 400px;
+    font-size: 20px;
+    
+    border-radius: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    color: white;
+    font-size: 20px;
+}
+
+#quote {
+    position: relative;
+    top: 150px;
+    color: white;
+    font-size: 20px;
+}
+
+#todo-list {
+    border: 1px solid white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    color: white;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+#todo-list button {
+    margin-left: 20px;
+    border-radius: 100px;
+    border: 0;
+}
