@@ -15,19 +15,53 @@ function deleteToDo (event) {
     saveToDos();
 }
 
+
 function paintToDo(newToDoObj){
     const list = document.createElement("li");
     list.id = newToDoObj.id;
+    
+    const checkbox = document.createElement("input")
+    checkbox.type = 'checkbox';
+    checkbox.classList = 'checkBox';
+    
+    checkbox.addEventListener('click', handleCheckbox);
 
     const span = document.createElement("span");
+    span.classList = 'toDoSpan';
     span.innerText = newToDoObj.text;
+
+    // 기존의 체크박스의 체크 유무에 대해 보여주는 화면 분기
+    if(newToDoObj.checked) {
+        span.classList.add('checked');
+        checkbox.checked = true;
+    } else {
+        span.classList.remove('checked');
+        checkbox.checked = false;
+    }
+
+    function handleCheckbox(event){
+        const listChecked = event.target.checked;
+        if(listChecked){
+            span.classList.add('checked');
+            newToDoObj.checked = listChecked;
+            saveToDos();
+        } else {
+            span.classList.remove('checked');
+            newToDoObj.checked = listChecked;
+            saveToDos();
+        }
+    }
+
+    const div = document.createElement("div");
 
     const button = document.createElement("button");
     button.innerText = "❌";
-    
-    button.addEventListener("click", deleteToDo)
 
-    list.appendChild(span);
+    button.addEventListener("click", deleteToDo);
+
+    div.appendChild(checkbox);
+    div.appendChild(span);
+    list.appendChild(div);
     list.appendChild(button);
 
     toDoList.appendChild(list);
@@ -36,15 +70,18 @@ function paintToDo(newToDoObj){
 function handleToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
+    console.log(event)
     toDoInput.value = "";
     const newToDoObj = {
         id : Date.now(),
         text : newTodo,
+        checked : false,
     }
     toDos.push(newToDoObj);
     paintToDo(newToDoObj);
     saveToDos();
 }
+
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 

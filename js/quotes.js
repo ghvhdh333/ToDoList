@@ -1,77 +1,121 @@
 const quotes = [
     {
-        quote : "When you have faults, do not fear to abandon them.",
-        author : "Confucius",
+        quote : "Don't dwell on the past.",
     },
     {
-        quote : "They must often change who would be constant in happiness or wisdom.",
-        author : "Confucius",
+        quote : "Believe in yourself.",
     },
     {
-        quote : "Age is no guarantee of maturity.",
-        author : "Lawana Blackwell",
+        quote : "Follow your heart.",
     },
     {
-        quote : "Youth isn’t always all it’s touted to be.",
-        author : "Lawana Blackwell",
+        quote : "Seize the day.",
     },
     {
-        quote : "You will face many defeats in life, but never let yourself be defeated.",
-        author : "Maya Angelou",
+        quote : "You only live once.",
     },
     {
-        quote : "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-        author : "Nelson Mandela",
+        quote : "Past is just past.",
     },
     {
-        quote : "Life is either a daring adventure or nothing at all.",
-        author : "Helen Keller",
+        quote : "Love yourself.",
     },
     {
-        quote : "The goal of life is living in agreement with nature.",
-        author : "Zeno",
+        quote : "Where there is a will there is a way.",
     },
     {
-        quote : "This too shall pass.",
-        author : "Et hoc transibit",
+        quote : "Don't beat yourself up.",
+    },
+    {
+        quote : "Life is a journey.",
+    },
+    {
+        quote : "Don't dream, Be it.",
+    },
+    {
+        quote : "No Pain, No gain.",
+    },
+    {
+        quote : "No sweat, No sweet.",
     },
     {
         quote : "The die is cast.",
-        author : "Julius caesar",
     },
     {
-        quote : "Only I can change me life, no one can do it for me.",
-        author : "Carol Burnett",
+        quote : "When they go low, we go high.",
     },
     {
-        quote : "When in doubt, choose change.",
-        author : "Lily leung",
+        quote : "A friend is a second myself.",
+    },
+    {
+        quote : "Appearances are deceptive.",
+    },
+    {
+        quote : "Be brave.",
+    },
+    {
+        quote : "Every cloud has a silver lining.",
+    },
+    {
+        quote : "Don't judge a book by its cover.",
+    },
+    {
+        quote : "Hang in there.",
+    },
+    {
+        quote : "This is how life is.",
+    },
+    {
+        quote : "Live positive.",
+    },
+    {
+        quote : "Seeing is believing.",
+    },
+    {
+        quote : "He can do, she can do, why not me?",
+    },
+    {
+        quote : "If not now, then when?",
+    },
+    {
+        quote : "You deserve to be loved.",
+    },
+    {
+        quote : "Time waits for no one.",
+    },
+    {
+        quote : "Don't waste your youth.",
+    },
+    {
+        quote : "Time is gold.",
+    },
+    {
+        quote : "Your success is up to your efforts.",
+    },
+    {
+        quote : "This too shall pass away.",
+    },
+    {
+        quote : "Love what you do.",
     },
     {
         quote : "Life is unfair, get used to it.",
-        author : "Bill Gates",
     },
     {
-        quote : "Being happy never goes out of style.",
-        author : "Lilly Pulitzer",
+        quote : "Live live there is no tomorrow.",
     },
     {
-        quote : "All you need in this life is ignorance and confidence, then success is sure.",
-        author : "Maxime Lagacé",
+        quote : "Pain past is pleasure.",
     },
     {
-        quote : "Life is from the inside out. When you shift on the inside, life shifts on the outside.",
-        author : "Kamal Ravikant",
+        quote : "Envy and wrath shorten life.",
     },
     {
-        quote : "Life can only be understood backwards; but it must be lived forwards.",
-        author : "Søren Kierkegaard",
+        quote : "Life is all about timing.",
     },
 ]
 
 const quoteId = document.querySelector("#quote span:first-child");
-const authorId = document.querySelector("#quote span:last-child")
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quoteId.innerText = todaysQuote.quote;
-authorId.innerText = `- ${todaysQuote.author}`;

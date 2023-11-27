@@ -113,9 +113,6 @@ body img {
 }
 
 #todo-list {
-    border: 1px solid white;
-    border-radius: 20px;
-
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -126,18 +123,68 @@ body img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    
-    color: white;
 }
 
 #todo-list li {
     display: flex;
     justify-content: space-between;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    border: 1px solid white;
+    border-radius: 20px;
+    animation: slideIn 1.8s ease-out;
+    
+}
+
+#todo-list li div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkBox {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+.toDoSpan.checked {
+    color: rgb(189, 189, 189);
+    text-decoration: line-through;
+}
+
+.toDoSpan {
+    padding-top: 4px;
+    color: white;
 }
 
 #todo-list button {
     margin-left: 20px;
     border-radius: 100px;
     border: 0;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
 }
+
+#todo-list button:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+#todo-list button:active {
+    background-color: white;
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
