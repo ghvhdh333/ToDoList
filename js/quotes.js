@@ -113,7 +113,7 @@ const quotes = [
     {
         quote : "Life is all about timing.",
     },
-]
+];
 
 const quoteId = document.querySelector("#quote span:first-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
